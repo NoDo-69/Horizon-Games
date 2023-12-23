@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/*Navigation Bar*/
+
+h1{
+    font-style: italic;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #2b2b2b;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    max-width: 100%;
+}
+
+label{
+    margin-left: 20px;
+    width: 500px;
+    padding:5px;
+    background-color: black;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bi-controller{
+    font-size: 50px;
+    margin-bottom: 3px;
+    margin-right: 8px;
+    color: green !important;
+}
+.bi-search{
+    padding: 15px;
+    background-color: green;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.bi-search:hover{
+    background-color: rgb(5, 190, 5);
+}
+
+.nav-input{
+    padding: 10px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    width: 80%;
+    border: 0;
+    font-style: italic;
+    font-family: 'Exo', sans-serif;
+}
+
+.nav-input::placeholder{
+    color: white;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 15px;
+    font-size: 16px;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+}
+
+#register-link{
+    background-color: green;
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+#register-link:hover{
+    background-color: rgb(5, 190, 5);
+}
+
+/* this section will be used to display games and their description */
+
+.ad-section{
+    min-height: 100px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    font-style: italic;
+    font-family: 'Exo', sans-serif;
+}
+
+.ad-carousel-container{
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.top-section-text{
+    color: white;
+}
+
+.slide {
+    display: none;
+    color: white;
+}
+
+.active{
+    display: flex;
+}
+
+img{
+    max-width: 50%;
+    height: auto;
+    border-radius: 20px 0px 0px 20px;
+    cursor: pointer;
+}
+
+.description {
+    border-radius: 0px 20px 20px 0px;
+    padding: 20px;
+    background-color:#444444;
+}
+
+button {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 12px;
+    border: none;
+    transition: all .3s ease-out;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #2b2b2b;
+}
+
+button:hover{
+    background-color: #5e5c5c;
+}
+
+.prev {
+    color: white;
+    font-size: 50px;
+    left: -80px;
+    bottom: 50px;
+}
+
+.next{
+    color: white;
+    font-size: 50px;
+    right: -80px;
+    bottom: 50px;
+}
+
+/*recent game section*/
+
+.card-section{
+    background-color: #2b2b2b;
+    min-height: 100px;
+    max-width: 100%;
+    padding: 20px;
+    font-style: italic;
+    font-family: 'Exo', sans-serif;
+}
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+.card{
+    text-align: center;
+    width: 25%;
+    transition: transform 0.3s ease; 
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-description{
+    width: 100%;
+    color: white;
+    background-color: #2b2b2b;
+    padding: 20px;
+}
+
+.card img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.name{
+    font-size: 20px;
+}
