@@ -22,7 +22,7 @@ function Register(username, email, password){
         "email":  email.value,
         "password": password.value
     }
-    fetch('https://localhost:7187/Users/userRegister',{
+    fetch('https://localhost:7203/Users/userRegister',{
         method : 'POST',
         body: JSON.stringify(body),
         headers: {

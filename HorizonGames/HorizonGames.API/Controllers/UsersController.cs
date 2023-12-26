@@ -34,14 +34,7 @@ namespace HorizonGames.API.Controllers
             return await _context.Users.AnyAsync(u => u.Email == email);
         }
 
-        private async Task<bool> IsCorrectEmailFormat(string email)
-        {
-            if (email == null)
-            {
-                return false;
-            }
-            return email.StartsWith("") && email.Contains("@") && email.EndsWith("gmail.com");
-        }
+
         [HttpGet]
         public async Task<ActionResult<APIResponse>> GetUsers()
         {
@@ -107,14 +100,6 @@ namespace HorizonGames.API.Controllers
                     _response.StatusCode = HttpStatusCode.Conflict;
                     _response.IsSuccess = false;
                     _response.Message = "Username is already In Use";
-                    _response.Result = null;
-                    return _response;
-                }
-                if (!await IsCorrectEmailFormat(registerUser.Email))
-                {
-                    _response.StatusCode = HttpStatusCode.BadRequest;
-                    _response.IsSuccess = false;
-                    _response.Message = "Incorrect email format";
                     _response.Result = null;
                     return _response;
                 }
